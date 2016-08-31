@@ -1,7 +1,7 @@
 # Ansible script for Postgres
 
 
-This ansible script will provision a given VM with a redis listening on all addresses and is booted up automatically at machine start time.
+This ansible script will provision a given VM with a postgres db listening on all addresses and is booted up automatically at machine start time.
 
 ## Steps
 ### 1) Host configuration
@@ -16,7 +16,7 @@ Example:
 
 ### 2) Configure user
 
-Edit username on ***install-redis.yml*** file. Depending on your VM setup you may use different users suchs as: ops, admin, root, etc.
+Edit username on ***install-postgres.yml*** file. Depending on your VM setup you may use different users suchs as: ops, admin, root, etc.
 
 Example:
 
