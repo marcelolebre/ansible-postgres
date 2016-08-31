@@ -1,0 +1,12 @@
+---
+- name: Update ubuntu
+  apt: update_cache=yes
+  become: true
+
+- name: Install dependencies
+  apt: pkg={{ item }}
+  become: true
+  with_items:
+    - libpq-dev
+    - python-psycopg2
+      

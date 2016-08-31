@@ -1,0 +1,19 @@
+---
+  - name: Create Postgres User
+    become: true
+    become_user: postgres
+    postgresql_user: name=phoenix-devops password=secret role_attr_flags=CREATEDB,SUPERUSER
+
+  - name: Create Postgres Database
+    become: true
+    become_user: postgres
+    postgresql_db: name=phoenix-staging
+
+  - name: copy postgresl config file
+    copy: src=templates/postgresql.conf dest=/etc/postgresql/9.5/main
+
+  - name: copy postgresl pg_hba file
+    copy: src=templates/pg_hba.conf dest=/etc/postgresql/9.5/main
+
+
+      
