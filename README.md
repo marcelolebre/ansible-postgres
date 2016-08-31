@@ -31,7 +31,7 @@ ansible-playbook install-postgres.yml -i hosts
 
 ### Results
 
-If things go accordingly you should see something like this:
+You should see something like this:
 
 ```
 PLAY [Install Postgres] ********************************************************
